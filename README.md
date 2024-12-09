@@ -41,21 +41,10 @@ role_type = "miner"
 register_response = register_user(wallet_address, labid, role_type)
 print("Registration Response:", register_response)
 
-# Check miner data
+# After completing task(s), check miner data
 miner_wallet_address = "miner_wallet_address"
 labid = "your_lab_id"
 userdata(labid=labid, wallet_address=miner_wallet_address)
-
-# View miner points
-labid = "your_lab_id"
-userpoint(labid, miner_wallet_address)
-
-# Request payment
-request_amount = 250
-print(request_reward_payment(labid, miner_wallet_address, request_amount))
-
-# Check balance
-print(check_user_balance(labid, miner_wallet_address))
 ```
 ## Installation
 
@@ -84,6 +73,13 @@ chmod +x scripts/install.sh
 
 ```bash
 pip install -r requirements.txt
+```
+
+5. Add WALLET_ADDRESS in .env:
+
+```bash
+#create a .env file
+WALLET_ADDRESS=
 ```
 
 ## Usage
