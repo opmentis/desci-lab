@@ -1,4 +1,4 @@
-# Decentralizing Scientific Discovery Lab
+# Decentralized Scientific Discovery Lab
 DeSci Lab: Engage in groundbreaking protein folding research and advance scientific breakthroughs
 A distributed protein sequence processing tool that generates Multiple Sequence Alignments (MSAs) and features for AlphaFold structure prediction. Join the Mentis network to contribute your computing power and earn rewards.
 
