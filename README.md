@@ -18,34 +18,6 @@ The miner uses AlphaFold's streaming approach:
 - No local storage of full databases required
 - Chunks are processed and discarded to save space
 
-## REGISTRATION
-
-```bash
-pip install opmentis
-```
-
-### Registering as Miner
-register as a miner:
-
-```python
-from opmentis import userdata, userpoint, request_reward_payment, get_active_lab, register_user
-
-# Fetch active lab information
-active_lab = get_active_lab()
-print("Active Lab Information:", active_lab)
-
-# Register as a miner
-wallet_address = "your_wallet_address"
-labid = "your_lab_id"
-role_type = "miner"
-register_response = register_user(wallet_address, labid, role_type)
-print("Registration Response:", register_response)
-
-# After completing task(s), check miner data
-miner_wallet_address = "miner_wallet_address"
-labid = "your_lab_id"
-userdata(labid=labid, wallet_address=miner_wallet_address)
-```
 ## Installation
 
 1. Clone the repository:
@@ -60,6 +32,23 @@ cd mentis-alphafold-miner
 ```bash
 python -m venv .venv
 source .venv/bin/activate  # Linux/macOS
+```
+##### REGISTRATION
+
+```bash
+pip install opmentis
+```
+
+##### Registering as Miner
+```python
+from opmentis import register_user
+
+# Register as a miner
+wallet_address = "your_wallet_address"
+labid = "your_lab_id"
+role_type = "miner"
+register_response = register_user(wallet_address, labid, role_type)
+print("Registration Response:", register_response)
 ```
 
 3. Install system dependencies:
