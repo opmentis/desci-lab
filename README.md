@@ -23,8 +23,8 @@ The miner uses AlphaFold's streaming approach:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/mentis/mentis-alphafold-miner.git
-cd mentis-alphafold-miner
+git clone https://github.com/opmentis/desci-lab.git
+cd desci-lab
 ```
 
 2. Create and activate a virtual environment:
