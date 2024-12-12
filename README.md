@@ -94,7 +94,7 @@ On first run, the miner will:
 export CPU_CORES=2  # Use only 2 cores
 python miner.py --wallet YOUR_WALLET_ADDRESS
 ```
-##### WITHDRAWAL
+### Withdraw $OPM tokens
 
 ```python
 from opmentis import request_reward_payment, check_user_balance
@@ -110,6 +110,13 @@ print(request_reward_payment(labid, wallet_address, request_amount))
 # Check balance
 print(check_user_balance(labid, wallet_address))
 ```
+## To withdraw your $OPM tokens, follow these steps:
+- ⁠Open the rewards.py file in the desci-lab folder, ensuring you have the OpMentis Python package installed.
+- ⁠Enter your wallet address registered to DeSci Lab in the wallet_address variable.
+- Input your desired withdrawal amount in the request_amount variable (cannot exceed your current balance).
+- ⁠Run the command python rewards.py
+- *Payment will be processed within 24 hours.
+- *Automated payment method coming in few weeks and mining on Web UI coming soon
 
 ### Common Errors
 - "Database not found": Re-run installation script
