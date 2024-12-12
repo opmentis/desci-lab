@@ -31,6 +31,8 @@ def setup_logging():
     handler.setFormatter(ColoredFormatter())
     
     logging.basicConfig(
+        filename='miner.log',
+        filemode='a',
         level=logging.INFO,
         handlers=[handler]
     ) 
