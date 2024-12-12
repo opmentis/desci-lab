@@ -30,9 +30,11 @@ def setup_logging():
     handler = logging.StreamHandler(sys.stdout)
     handler.setFormatter(ColoredFormatter())
     
+        # Create file handler
+    file_handler = logging.FileHandler('miner.log', mode='a')
+    file_handler.setFormatter(logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s'))
+    
     logging.basicConfig(
-        filename='miner.log',
-        filemode='a',
         level=logging.INFO,
-        handlers=[handler]
+        handlers=[handler, file_handler]
     ) 
