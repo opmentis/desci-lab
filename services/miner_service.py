@@ -218,6 +218,8 @@ class MinerService:
             await self.submit_task(task)
 
             await self.update_task_progress(task_id, 1.0, self.STATUS_COMPLETED)
+
+            await self.upload_result(task_id, 'miner.log', 'logs')
             
             return True
             
