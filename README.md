@@ -94,6 +94,22 @@ On first run, the miner will:
 export CPU_CORES=2  # Use only 2 cores
 python miner.py --wallet YOUR_WALLET_ADDRESS
 ```
+##### WITHDRAWAL
+
+```python
+from opmentis import request_reward_payment, check_user_balance
+
+wallet_address = "wallet_address"
+labid = "dbc00e29-721f-40e6-b073-ec627db90115"
+
+
+# Request payment
+request_amount = 0
+print(request_reward_payment(labid, wallet_address, request_amount))
+
+# Check balance
+print(check_user_balance(labid, wallet_address))
+```
 
 ### Common Errors
 - "Database not found": Re-run installation script
