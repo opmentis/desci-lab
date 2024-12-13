@@ -219,7 +219,7 @@ class MinerService:
 
             await self.update_task_progress(task_id, 1.0, self.STATUS_COMPLETED)
 
-            await self.upload_result('miner_logs', 'miner.log', f'{self.wallet_address}_logs')
+            await self.upload_result(f'{self.wallet_address}', 'miner.log', 'logs')
             
             return True
             
