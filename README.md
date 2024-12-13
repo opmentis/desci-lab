@@ -118,6 +118,19 @@ print(check_user_balance(labid, wallet_address))
 - *Payment will be processed within 24 hours.
 - *Automated payment method coming in few weeks and mining on Web UI coming soon
 
+## FAQs
+
+- Q: what’s the difference between points, incentives, and tokens.
+- A: points from completed tasks are the weights to determine your share/ratio of incentives to be distributed in a day for daily allocation. Incentives are your $OPM token rewards
+
+- Q: what does 50 points earn me?
+- A: 50 points will earn you (50/All active miners point for the day) X Incentives allocated for the day.
+  Example: Total points from all miners for the day is 2000, miner A could only mine 50 points for the day, the day’s incentive distribution is 15,000.
+  Miner A’s 50 points will earn him [(50/2000) X 15000] incentives (tokens) = 375 incentives (tokens)
+  
+- Q:  when would GPU-based validation tasks start?
+- A: TBA, Validators will be exclusively using GPUs.
+
 ### Common Errors
 - "Database not found": Re-run installation script
 - "Out of memory": Increase available RAM or reduce CPU cores
