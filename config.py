@@ -16,7 +16,7 @@ class Settings(BaseSettings):
     """Miner configuration settings"""
     
     # API Settings
-    API_URL: str = "http://ds.opmentis.xyz:8000"
+    API_URL: str = "http://ds.opmentis.xyz"
     TASK_POLL_INTERVAL: int = 50  # seconds
     
     # Authentication
