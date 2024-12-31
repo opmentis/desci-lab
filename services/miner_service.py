@@ -100,6 +100,10 @@ class MinerService:
                 f"{self.api_url}/tasks/next",
                 params=params
             ) as response:
+                if response.status == 429:
+                    logger.warning(f"Cooldown Activity: {await response.text()}")
+                    return None
+                    
                 if response.status == 200:
                     task = await response.json()
 
