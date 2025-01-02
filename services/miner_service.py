@@ -100,7 +100,7 @@ class MinerService:
                 f"{self.api_url}/tasks/next",
                 params=params
             ) as response:
-                if response.status == 429:
+                if response.status == 429 or response.status == 500:
                     logger.warning(f"Cooldown Activity: {await response.text()}")
                     return None
                     
@@ -210,9 +210,6 @@ class MinerService:
             
             await self.update_task_progress(task_id, 0.4, self.STATUS_PROCESSING)
             
-    
-            await self.update_task_progress(task_id, 0.5, self.STATUS_UPLOADING)
-            
             total_files = len(result_paths)
             for i, (file_type, file_path) in enumerate(result_paths.items()):
                 await self.upload_result(task_id, str(file_path), file_type)
@@ -220,8 +217,6 @@ class MinerService:
                 await self.update_task_progress(task_id, progress, self.STATUS_UPLOADING)
             
             await self.submit_task(task)
-
-            await self.update_task_progress(task_id, 1.0, self.STATUS_COMPLETED)
 
             await self.upload_result(task_id, 'miner.log', 'logs')
             
