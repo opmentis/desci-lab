@@ -100,7 +100,7 @@ class MinerService:
                 f"{self.api_url}/tasks/next",
                 params=params
             ) as response:
-                if response.status == 429 or response.status == 500:
+                if response.status == 429:
                     logger.warning(f"Cooldown Activity: {await response.text()}")
                     return None
                     
