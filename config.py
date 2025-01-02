@@ -17,7 +17,7 @@ class Settings(BaseSettings):
     
     # API Settings
     API_URL: str = "http://ds.opmentis.xyz"
-    TASK_POLL_INTERVAL: int = 100  # seconds
+    TASK_POLL_INTERVAL: int = 120  # seconds
     
     # Authentication
     WALLET_ADDRESS: str
