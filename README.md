@@ -3,7 +3,7 @@ DeSci Lab: Engage in groundbreaking protein folding research and advance scienti
 A distributed protein sequence processing tool that generates Multiple Sequence Alignments (MSAs) and features for AlphaFold structure prediction. Join the Mentis network to contribute your computing power and earn rewards.
 
 ## System Requirements
-
+- **OPM Tokens**: 10,000 $OPM
 - **CPU**: 4+ cores recommended
 - **RAM**: 8GB+ recommended
 - **Storage**: 1GB free space for work files
